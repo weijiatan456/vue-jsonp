@@ -26,7 +26,7 @@ var app = express()
 var apiRoutes = express.Router()
 
 // http://h.xiami.com/#!/artist/1/1
-// http://api.xiami.com/web?v=2.0&app_key=1&class=1&type=1&_ksTS=1532589662904_76&callback=jsonp77&r=artist/hot-list
+// http://api.xiami.com/web?v=2.0&app_key=1&class=1&type=1&_ksTS=1532598525985_76&callback=jsonp77&r=artist/hot-list
 apiRoutes.get('/getList', function (req, res) {
   var url = 'http://api.xiami.com/web'
   axios.get(url, {
@@ -42,7 +42,7 @@ apiRoutes.get('/getList', function (req, res) {
   })
 })
 
-app.use('/api', apiRoutes)
+app.use('/service', apiRoutes)
 
 var compiler = webpack(webpackConfig)
 

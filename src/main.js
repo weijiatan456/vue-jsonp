@@ -6,9 +6,11 @@ import App from './App'
 import routes from './router'
 import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import './assets/public.css'
 
 Vue.config.productionTip = false
 
+Vue.use(VueRouter);
 Vue.use(Mint);
 
 const router = new VueRouter({
