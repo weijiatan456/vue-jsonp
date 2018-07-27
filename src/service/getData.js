@@ -12,14 +12,13 @@ export function getRecommend() {
 // 通过服务器代理获取数据
 export function getList() {
     const url = '/service/getList'
-    const data = Object.assign({}, commonParams, {
+    const data = Object.assign({}, {}, {
         v: '2.0',
         app_key: 1,
         class: 1,
         type: 1,
-        r: 'artist/hot-list',
-        // format: 'json'
-        callback: 'jsonp77'
+        _ksTS: '1532652214866_60',
+        r: 'artist/hot-list'
     })
 
     return axios.get(url, {

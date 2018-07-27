@@ -10,7 +10,19 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+        '/service/getList': {
+            target: 'http://api.xiami.com/web',  //目标接口域名
+            changeOrigin: true,  //是否跨域
+            bypass:function(req,res,proxyOptions){
+                req.headers.referer = 'http://h.xiami.com/';
+                req.headers.host = 'api.xiami.com'
+            },
+            pathRewrite: {
+                '^/service/getList': ''   //重写接口
+            }
+        }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

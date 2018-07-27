@@ -27,7 +27,6 @@ export default{
     methods: {
         _getRecommend() {
             getRecommend().then((res) => {
-                console.log('获取数据成功：');
                 console.log(res)
             })
         },
