@@ -35,6 +35,11 @@ export default{
                 console.log(res);
             })
         }
+        // 也可以写成如下写法
+        // async _getList() {
+        //     const res = await getList();
+        //     console.log(res);
+        // }
     }
 }
 </script>
